@@ -35,7 +35,7 @@ function ContactForm() {
   };
 
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box>
       <Grid
         container
         spacing={2}
