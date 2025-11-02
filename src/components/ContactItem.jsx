@@ -20,7 +20,7 @@ function ContactItem({ item }) {
         border: '1px solid #ccc',
         borderRadius: 2,
         p: 2,
-        mt: 1.5,
+        mt: 1,
         mb: 1,
         backgroundColor: '#f9f9f9',
         display: 'flex',
@@ -38,6 +38,18 @@ function ContactItem({ item }) {
             onChange={(e) => setEditName(e.target.value)}
             fullWidth
             sx={{ mb: 1 }}
+            InputProps={{
+              sx: {
+                padding: '4px 8px',
+                fontSize: { xs: '0.8rem', sm: '0.85rem', md: '0.9rem' },
+              },
+            }}
+            InputLabelProps={{
+              sx: {
+                fontSize: { xs: '0.75rem', sm: '0.8rem', md: '0.85rem' },
+                top: '-2px',
+              },
+            }}
           />
           <TextField
             label="전화번호 수정"
@@ -46,20 +58,38 @@ function ContactItem({ item }) {
             onChange={(e) => setEditPhone(e.target.value)}
             fullWidth
             sx={{ mb: 1 }}
+            InputProps={{
+              sx: {
+                padding: '4px 8px',
+                fontSize: { xs: '0.8rem', sm: '0.85rem', md: '0.9rem' },
+              },
+            }}
+            InputLabelProps={{
+              sx: {
+                fontSize: { xs: '0.75rem', sm: '0.8rem', md: '0.85rem' },
+                top: '-2px',
+              },
+            }}
           />
           <Box sx={{ display: 'flex', gap: 1 }}>
             <Button
               variant="contained"
               color="success"
               onClick={handleUpdate}
-              sx={{ flex: 1 }}
+              sx={{
+                flex: 1,
+                fontSize: { xs: '0.75rem', sm: '0.8rem', md: '0.85rem' },
+              }}
             >
               저장
             </Button>
             <Button
               variant="outlined"
               onClick={() => setEditMode(false)}
-              sx={{ flex: 1 }}
+              sx={{
+                flex: 1,
+                fontSize: { xs: '0.75rem', sm: '0.8rem', md: '0.85rem' },
+              }}
             >
               취소
             </Button>
@@ -67,10 +97,22 @@ function ContactItem({ item }) {
         </>
       ) : (
         <>
-          <Typography sx={{ mb: 2, textAlign: 'left' }}>
+          <Typography
+            sx={{
+              mb: 1,
+              textAlign: 'left',
+              fontSize: { xs: '0.8rem', sm: '0.85rem', md: '0.95rem' },
+            }}
+          >
             <strong>이름:</strong> {item.name}
           </Typography>
-          <Typography sx={{ mb: 1.5, textAlign: 'left' }}>
+          <Typography
+            sx={{
+              mb: 1,
+              textAlign: 'left',
+              fontSize: { xs: '0.8rem', sm: '0.85rem', md: '0.95rem' },
+            }}
+          >
             <strong>전화번호:</strong> {item.phoneNumber}
           </Typography>
           <Box sx={{ display: 'flex', gap: 1, mt: 1 }}>
@@ -78,7 +120,10 @@ function ContactItem({ item }) {
               variant="outlined"
               color="primary"
               onClick={() => setEditMode(true)}
-              sx={{ flex: 1 }}
+              sx={{
+                flex: 1,
+                fontSize: { xs: '0.75rem', sm: '0.8rem', md: '0.85rem' },
+              }}
             >
               수정
             </Button>
@@ -86,7 +131,10 @@ function ContactItem({ item }) {
               variant="outlined"
               color="error"
               onClick={() => deleteContact(item.id)}
-              sx={{ flex: 1 }}
+              sx={{
+                flex: 1,
+                fontSize: { xs: '0.75rem', sm: '0.8rem', md: '0.85rem' },
+              }}
             >
               삭제
             </Button>

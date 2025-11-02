@@ -8,6 +8,18 @@ function SearchBar({ searchTerm, setSearchTerm }) {
       value={searchTerm}
       onChange={(e) => setSearchTerm(e.target.value)}
       fullWidth
+      InputProps={{
+        sx: {
+          padding: '4px 8px',
+          fontSize: { xs: '0.8rem', sm: '0.85rem', md: '0.9rem' },
+        },
+      }}
+      InputLabelProps={{
+        sx: {
+          fontSize: { xs: '0.75rem', sm: '0.8rem', md: '0.85rem' },
+          top: '-2px',
+        },
+      }}
     />
   );
 }

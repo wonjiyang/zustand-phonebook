@@ -16,61 +16,63 @@ function App() {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'flex-start',
+        px: { xs: 2, md: 4 },
+        py: { xs: 4, md: 6 },
       }}
     >
-      <Box
-        sx={{
-          maxWidth: 1000,
-        }}
-      >
-        <h1 style={{ textAlign: 'center', marginBottom: '2rem' }}>
-          📱 Phone Book
+      <Box sx={{ width: '100%', maxWidth: 1000 }}>
+        <h1
+          style={{
+            textAlign: 'center',
+            marginBottom: '2rem',
+            fontSize: '1.7rem',
+          }}
+        >
+          Phone Book
         </h1>
 
-        {/* 위쪽: 추가 폼 */}
         <ContactForm />
 
-        {/* 가운데: 검색창 */}
         <Box mt={3}>
           <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
         </Box>
 
-        {/* 아래쪽: 전체 리스트 + 검색 결과 (좌우 50%) */}
         <Box
           mt={3}
           sx={{
             display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'stretch',
-            width: '100%',
+            flexDirection: { xs: 'column', md: 'row' },
             gap: 3,
+            width: '100%',
           }}
         >
-          {/* 왼쪽: 전체 연락처 */}
           <Box
             sx={{
-              width: '50%',
-              borderRadius: '16px',
+              width: { xs: '100%', md: '50%' },
+              borderRadius: 2,
               p: 1,
               display: 'flex',
               flexDirection: 'column',
-              overflowY: 'auto', // ✅ 스크롤 내부에서만
+              overflowY: 'auto',
+              height: { xs: 300, md: 400 },
               scrollbarWidth: 'thin',
+              backgroundColor: '#f5f5f5',
             }}
           >
             <ContactList />
           </Box>
 
-          {/* 오른쪽: 검색 결과 */}
           <Box
             sx={{
-              width: '50%',
-              borderRadius: '16px',
+              width: { xs: '100%', md: '50%' },
+              borderRadius: 2,
               p: 1,
               display: 'flex',
               flexDirection: 'column',
-              overflowY: 'auto', // ✅ 스크롤 내부에서만
+              overflowY: 'auto',
+              height: { xs: 300, md: 400 },
               scrollbarWidth: 'thin',
+              backgroundColor: '#f5f5f5',
             }}
           >
             <SearchResultList searchTerm={searchTerm} />

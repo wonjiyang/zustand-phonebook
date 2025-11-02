@@ -8,10 +8,9 @@ function ContactForm() {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [error, setError] = useState('');
 
-  // 전화번호 유효성 검사 함수
   const validatePhoneNumber = (num) => {
     const onlyNumbers = num.replace(/[^0-9]/g, '');
-    return /^010\d{7,8}$/.test(onlyNumbers); // 010으로 시작 + 10~11자리
+    return /^010\d{7,8}$/.test(onlyNumbers);
   };
 
   const handleAddContact = () => {
@@ -32,9 +31,7 @@ function ContactForm() {
   };
 
   const handleKeyDown = (e) => {
-    if (e.key === 'Enter') {
-      handleAddContact();
-    }
+    if (e.key === 'Enter') handleAddContact();
   };
 
   return (
@@ -48,6 +45,8 @@ function ContactForm() {
             onChange={(e) => setName(e.target.value)}
             onKeyDown={handleKeyDown}
             fullWidth
+            InputProps={{ sx: { padding: '4px 8px', fontSize: '0.9rem' } }}
+            InputLabelProps={{ sx: { fontSize: '0.85rem', top: '-2px' } }}
           />
         </Grid>
 
@@ -60,6 +59,8 @@ function ContactForm() {
             onChange={(e) => setPhoneNumber(e.target.value)}
             onKeyDown={handleKeyDown}
             fullWidth
+            InputProps={{ sx: { padding: '4px 8px', fontSize: '0.9rem' } }}
+            InputLabelProps={{ sx: { fontSize: '0.85rem', top: '-2px' } }}
           />
         </Grid>
 
@@ -68,8 +69,8 @@ function ContactForm() {
             variant="contained"
             color="primary"
             onClick={handleAddContact}
-            sx={{ padding: '15px 16px' }}
             fullWidth
+            sx={{ padding: '10px 15px' }}
           >
             추가
           </Button>
