@@ -25,7 +25,6 @@ function ContactItem({ item }) {
         backgroundColor: '#f9f9f9',
         display: 'flex',
         flexDirection: 'column',
-        width: '100%',
         boxSizing: 'border-box',
       }}
     >

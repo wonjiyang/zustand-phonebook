@@ -7,6 +7,10 @@ input {
   padding: 9px 10px !important;
 }
 
+div {
+  background-color: white !important;
+}
+
 @media (max-width: 550px) {
   .css-1hqxn01 {
     width: 100vw !important;
