@@ -36,7 +36,18 @@ function ContactForm() {
 
   return (
     <Box sx={{ width: '100%' }}>
-      <Grid container spacing={2}>
+      <Grid
+        container
+        spacing={2}
+        sx={{
+          display: 'flex',
+          flexDirection: 'row',
+          gap: 2,
+          '@media (max-width:550px)': {
+            flexDirection: 'column',
+          },
+        }}
+      >
         <Grid item xs={12} sm={6}>
           <TextField
             label="이름"
