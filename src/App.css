@@ -12,7 +12,7 @@ input {
 
 @media (max-width: 550px) {
   .css-1hqxn01 {
-    width: 100vw;
+    width: 100vw !important;
   }
   .css-zjhuaj-MuiGrid-root {
     flex-direction: column !important;
