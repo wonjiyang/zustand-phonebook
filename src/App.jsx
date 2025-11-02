@@ -48,7 +48,7 @@ function App() {
         >
           <Box
             sx={{
-              width: { xs: '100%', md: '50%' },
+              width: { md: '50%' },
               borderRadius: 2,
               p: 1,
               display: 'flex',
@@ -64,7 +64,7 @@ function App() {
 
           <Box
             sx={{
-              width: { xs: '100%', md: '50%' },
+              width: { md: '50%' },
               borderRadius: 2,
               p: 1,
               display: 'flex',
