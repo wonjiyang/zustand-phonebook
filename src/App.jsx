@@ -56,7 +56,6 @@ function App() {
               overflowY: 'auto',
               height: { xs: 300, md: 400 },
               scrollbarWidth: 'thin',
-              backgroundColor: '#f5f5f5',
             }}
           >
             <ContactList />
@@ -72,7 +71,6 @@ function App() {
               overflowY: 'auto',
               height: { xs: 300, md: 400 },
               scrollbarWidth: 'thin',
-              backgroundColor: '#f5f5f5',
             }}
           >
             <SearchResultList searchTerm={searchTerm} />
